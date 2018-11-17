@@ -1,0 +1,65 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+.MainContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.MainView {
+    position:absolute;
+    width: 200px;
+    height: 300px;
+    margin-left: -100px;
+    margin-top: -150px;
+    top: 50%;
+    left: 50%;
+}
+
+.RedditDisplay {
+    position: absolute;
+    left:0px;
+    background: #ffffff;
+    width: 200px;
+    height: 300px;
+    border: 5px solid #f3f3f3;
+    border-radius: 5px;
+}
+
+.RedditDisplayImage {
+    width: 100px;
+    border-radius: 2px;
+}
+
+.RedditCoverImage {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+}
+
+.RedditText {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 10px;
+    height: 80px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.RedditFullImage {
+    position: absolute;
+    width: 150%;
+    left: 100%;
+    top: 0px;
+}
