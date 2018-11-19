@@ -2,7 +2,7 @@ import * as R from "ramda"
 
 var AppState = {
   data: [],
-  currentDisplayIndex: 0
+  currentDisplayIndex: 10
 };
 
 
@@ -21,6 +21,7 @@ const reducer = (state = AppState , action) => {
       });
 
       newState.data = list;
+    newState.currentDisplayIndex = list.length;
 
       return R.merge(state, newState);
 

@@ -47,9 +47,12 @@ class RedditDisplay extends Component {
     }
 
     var backgroundImage = this.props.item.data.thumbnail;
+    var angle = this.props.gap*this.props.index - 60;
+    var transform = "rotate(" + angle + "deg)";
+    var transformOrigin = "0% 100%";
 
     return (
-      <div onMouseEnter={this.mouseEnter}  onMouseLeave={this.mouseLeave} className="RedditDisplay" style={{left: this.offset , top: this.offset, display: visibility}}>
+      <div onMouseEnter={this.mouseEnter}  onMouseLeave={this.mouseLeave} className="RedditDisplay" style={{left: this.props.index/2 ,  transformOrigin: transformOrigin, transform: transform,  display: visibility}}>
         <div className="RedditCoverImage" style={{backgroundImage: "url(" + backgroundImage + ")"}}></div>
         <div className="RedditText" >{this.props.item.data.title}</div>
         {this.renderFullSizeImage()}

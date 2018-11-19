@@ -28,18 +28,19 @@ class App extends Component {
 
   renderSubreddits() {
     var _this = this;
+    var totalLength  = this.props.subReddit.data.length;
+    var gap = 90/totalLength;
+    var position = 100/totalLength;
 
     return this.props.subReddit.data.map(function(item, index) {
-      if (item.data.thumbnail_width) {
         return <RedditDisplay
             index={index}
+            gap={gap}
+            position = {position}
             currentDisplayIndex = {_this.props.subReddit.currentDisplayIndex}
             keyPressed = {_this.keyPressed}
             key={index}
             item={item}/>
-      } else {
-        return <div key={index} ></div>
-      }
     });
   }
 

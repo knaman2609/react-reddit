@@ -4,7 +4,7 @@ import axios from "axios"
 function fetchReddit(dispatch) {
   return function(event){
 
-    axios.get('https://www.reddit.com/r/cats.json')
+    axios.get('https://www.reddit.com/r/gif.json')
       .then(function (response) {
         dispatch({
           type: "LOAD_SUBREDDITS",
